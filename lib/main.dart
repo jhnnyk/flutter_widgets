@@ -29,47 +29,45 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Settings',
-            style: TextStyle(color: Colors.white),
-          ),
-          backgroundColor: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Settings',
+          style: TextStyle(color: Colors.white),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/200/200'),
-              const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Username',
-                  ),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Image.network('https://picsum.photos/200/200'),
+            const Padding(
+              padding: EdgeInsets.all(12.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Username',
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Notifications  '),
-                  Switch(
-                      value: value,
-                      onChanged: (newValue) {
-                        setState(() {
-                          value = newValue;
-                        });
-                      }),
-                ],
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Save'),
-              ),
-            ],
-          ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Notifications  '),
+                Switch(
+                    value: value,
+                    onChanged: (newValue) {
+                      setState(() {
+                        value = newValue;
+                      });
+                    }),
+              ],
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Save'),
+            ),
+          ],
         ),
       ),
     );
