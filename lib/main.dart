@@ -51,13 +51,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              Switch(
-                  value: value,
-                  onChanged: (newValue) {
-                    setState(() {
-                      value = newValue;
-                    });
-                  }),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Notifications  '),
+                  Switch(
+                      value: value,
+                      onChanged: (newValue) {
+                        setState(() {
+                          value = newValue;
+                        });
+                      }),
+                ],
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Save'),
+              ),
             ],
           ),
         ),
