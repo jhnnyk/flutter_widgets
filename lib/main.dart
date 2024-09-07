@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/pages/first.dart';
+import 'package:flutter_widgets/pages/second.dart';
 
 void main() {
   runApp(const MainApp());
@@ -66,6 +68,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {},
               child: const Text('Save'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const FirstPage()),
+                );
+              },
+              child: const Text('First Page'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const SecondPage()),
+                );
+              },
+              child: const Text('Second Page'),
             ),
           ],
         ),
